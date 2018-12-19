@@ -1,0 +1,6 @@
+[package]
+name = "brainfuck_interpreter"
+version = "1.0.0"
+authors = ["REMqb"]
+
+[dependencies]
