@@ -10,8 +10,6 @@ use std::env;
 fn main() -> Result<(), i32> {
     let mut args = env::args();
 
-    println!("{}", b);
-
     if args.len() == 1 {
         println!("Brainfuck interpreter");
         println!();
@@ -20,6 +18,7 @@ fn main() -> Result<(), i32> {
         return Ok(());
     }
 
+    args.next();
     let file = File::open(args.next().unwrap());
     let mut reader = BufReader::new(file.unwrap());
 
