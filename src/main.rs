@@ -30,6 +30,7 @@ fn main() -> Result<(), i32> {
     let mut interpreter = BrainFuckInterpreter::new();
 
     interpreter.load(buffer);
+    interpreter.optimize_jumps();
 
     match interpreter.run() {
         Ok(()) => return Ok(()),
